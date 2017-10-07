@@ -1,0 +1,13 @@
+my-spring-boot-example: 
+  image: jorgehernandezramirez/spring-boot-docker-reverse-proxy:1.0-SNAPSHOT
+  ports:
+    - "8080"
+  environment:
+    VIRTUAL_HOST: 'localhost'
+
+nginx:
+    image: jwilder/nginx-proxy
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+    ports:
+      - "80:80"
