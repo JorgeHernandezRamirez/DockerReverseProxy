@@ -1,8 +1,0 @@
-http://localhost:31676/v2/myfirstimage/tags/list
-http://localhost/v2/myfirstimage/tags/list -> A través del proxy inverso llegamos a los distintos balanceadores. Esto es necesario cuando tenemos un backend que queremos exponer
-docker-compose up -d --scale registry=2
-
-docker stop $(docker ps -a -q)
-
-link vs network
-expose vs port
